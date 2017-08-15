@@ -1,0 +1,127 @@
+body {
+  background: #f1f1f1;
+  font-family: 'Kreon', sans-serif;  
+  margin: 0px;
+  padding: 0px;
+}
+
+      #ls-official .main {
+        width: 320px;
+        margin: auto;
+      }
+      
+      .venue-container {}
+      
+      .venue-container .matches { 
+        display: none; 
+      }
+      
+      .venue-container .matches.active { 
+        display: block; 
+      }
+      
+      .venue-container .matches .match {
+        cursor: pointer;
+        padding: 10px;
+        border-bottom: 2px #706A60 solid;        
+        
+      }
+      
+      h3 {
+        color: white;
+        text-transform: uppercase;
+        background: #706A60; 
+        padding-left: 10px;
+        font-weight: normal;
+        margin: 0px;
+        height: 25px;
+      }
+      
+      .venue-container .matches .update { display: none; }
+      .venue-container .match .info {  }
+      
+      .venue-container .match .loader { 
+        display: none; 
+        width: 100%;
+        background: url('/wp-content/plugins/buxtahooda-scoreboard/assets/img/loader.gif') top center no-repeat;
+        height: 32px;
+      }
+
+.venue-container h2 {
+  padding: 0px 10px 0px 10px;
+  margin: 10px 0px 10px 0px;
+  border-bottom: 2px #706A60 solid;
+}
+
+.venue-container .nav-buttons {
+  height: 40px;
+  border-bottom: 2px #706A60 solid;        
+  
+}
+
+.venue-container .nav-buttons a, .button {
+  width: 80px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  background: #F2A001;
+  color: black;
+  float: left;    
+}
+
+.button {
+  padding: 5px;
+
+}
+
+.save-button {
+  position: absolute;
+}
+
+.cancel-button {
+  float: right;
+}
+
+.buttons {
+  height: 15px;
+}
+
+.venue-container .nav-buttons a {
+  float: left;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.venue-container .nav-buttons a:first-child {
+  margin-left: 18px;
+}
+
+.venue-container .team-names {
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+  color: #F2A001;
+}
+
+.venue-container strong {
+  text-transform: uppercase;
+  color: black;
+}
+
+.venue-container .info p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.scoreboard-table {
+  width: 100%;
+}
+
+.scoreboard-table .team-name-header {
+  text-align: left;
+}
+
+.total {
+  text-align: center;
+}
