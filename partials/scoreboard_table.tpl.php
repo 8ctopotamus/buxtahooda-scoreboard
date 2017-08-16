@@ -28,13 +28,11 @@
           ?>
           <?php if (!$mobile): ?>
             <td>
-              <?php echo $score ?>
-            </td>
+              <?php echo $score ?>            
+            </td>        
           <?php endif; ?>
         <?php endforeach; ?>
-        <td class="total"><?php echo $total ?></td>
+        <td class="total"><?php echo $total ?></td>      
       </tr>
     <?php endforeach; ?>
   </table>
-  
-  <a href="https://www.codeofthenorth.com/contact" target="_blank" title="Code of the North">Code of the North</a>

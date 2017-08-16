@@ -1,6 +1,6 @@
 body {
   background: #f1f1f1;
-  font-family: 'Kreon', sans-serif;  
+  font-family: 'Kreon', sans-serif;
   margin: 0px;
   padding: 0px;
 }
@@ -9,39 +9,39 @@ body {
         width: 320px;
         margin: auto;
       }
-      
+
       .venue-container {}
-      
-      .venue-container .matches { 
-        display: none; 
+
+      .venue-container .matches {
+        display: none;
       }
-      
-      .venue-container .matches.active { 
-        display: block; 
+
+      .venue-container .matches.active {
+        display: block;
       }
-      
+
       .venue-container .matches .match {
         cursor: pointer;
         padding: 10px;
-        border-bottom: 2px #706A60 solid;        
-        
+        border-bottom: 2px #706A60 solid;
+
       }
-      
+
       h3 {
         color: white;
         text-transform: uppercase;
-        background: #706A60; 
+        background: #706A60;
         padding-left: 10px;
         font-weight: normal;
         margin: 0px;
         height: 25px;
       }
-      
+
       .venue-container .matches .update { display: none; }
       .venue-container .match .info {  }
-      
-      .venue-container .match .loader { 
-        display: none; 
+
+      .venue-container .match .loader {
+        display: none;
         width: 100%;
         background: url('/wp-content/plugins/buxtahooda-scoreboard/assets/img/loader.gif') top center no-repeat;
         height: 32px;
@@ -55,8 +55,8 @@ body {
 
 .venue-container .nav-buttons {
   height: 40px;
-  border-bottom: 2px #706A60 solid;        
-  
+  border-bottom: 2px #706A60 solid;
+
 }
 
 .venue-container .nav-buttons a, .button {
@@ -67,7 +67,7 @@ body {
   font-weight: bold;
   background: #F2A001;
   color: black;
-  float: left;    
+  float: left;
 }
 
 .button {
@@ -124,4 +124,9 @@ body {
 
 .total {
   text-align: center;
+}
+
+table {
+  width: 100%;
+  border: 1px solid red;
 }

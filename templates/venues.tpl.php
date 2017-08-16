@@ -5,24 +5,24 @@
   $action = "add";
   $currentTeam = false;
   $teams = getTeams();
-  
+
   if (isset($_GET['edit'])) {
     $mode = 'edit';
     $title = "Edit Venue";
     $actionVerb = "edit";
     $action = "edit";
-    
+
     $currentVenue = getVenueById($_GET['edit']);
   }
-  
+
   if (isset($_GET['delete'])) {
     $message = "Venue Deleted!";
     deleteVenue($_GET['delete']);
   }
 
-  if (isset($_POST['form_action'])) {    
+  if (isset($_POST['form_action'])) {
     $formAction = $_POST['form_action'];
-    
+
     switch ($formAction) {
       case 'add' :
         $result = addVenue($_POST['name'], $_POST['address']);
@@ -37,7 +37,7 @@
         break;
       case 'edit':
         $result = updateVenue($_POST['venue_id'], $_POST['name'], $_POST['address']);
-        setOfficials($_POST['venue_id'], $_POST['officials']);        
+        setOfficials($_POST['venue_id'], $_POST['officials']);
         $message = "Venue Updated!";
         break;
       default:
@@ -47,26 +47,26 @@
   }
 
   $venues = getVenues();
-  
+
   $nameValue = isset($nameValue)
     ? $nameValue
     : ($currentVenue ? $currentVenue->name : false);
-    
+
   $addressValue = isset($addressValue)
     ? $addressValue
     : ($currentVenue ? $currentVenue->address : false);
-    
+
   $venueId = isset($venueId)
     ? $venueId
     : ($currentVenue ? $currentVenue->id : false);
-    
+
   if (!isset($officialsValue)) {
     if ($currentVenue) {
       $officialsValue = getOfficialsByVenueId($currentVenue->id);
     } else
       $officialsValue = false;
   }
-  
+
 ?>
 <h2>Venues</h2>
 <div id="team-form">
@@ -110,9 +110,9 @@
 <div id="team-list">
   <h2>Venues</h2>
   <?php foreach ($venues as $index => $venue): ?>
-    <div>       
+    <div>
       <p><strong><?php echo $venue->name ?></strong><br /><?php echo $venue->address; ?></p>
-      <a href="<?php echo admin_url('admin.php?page=venues&edit='.$venue->id) ?>" >edit</a> 
+      <a href="<?php echo admin_url('admin.php?page=venues&edit='.$venue->id) ?>" >edit</a>
       <a href="<?php echo admin_url('admin.php?page=venues&delete='.$venue->id) ?>" >delete</a>
     </div>
   <?php endforeach; ?>
