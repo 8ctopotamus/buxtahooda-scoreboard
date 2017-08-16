@@ -24,7 +24,7 @@ $roundsTable = $wpdb->prefix.'livescoreboard_trivia_rounds';
  */
 
 // ROUNDS
-function addRound($round) {
+function addRound($round_id, $data) {
   global $wpdb;
   global $roundsTable;
 
@@ -37,7 +37,7 @@ function addRound($round) {
   );
   $roundId = $wpdb->insert_id;
 
-  echo $rounds;
+  return true;
 }
 
 function addGame($name, $description, $venues) {
@@ -140,6 +140,16 @@ function cmpGameTotal($a, $b) {
 /*
  * delete
  */
+
+function deleteRounds() {
+   global $wpdb;
+   global $roundsTable;
+
+   $wpdb->get_results(
+     "DELETE FROM $roundsTable"
+   );
+   return true;
+}
 
 function deleteGame($gameId) {
   global $wpdb;
@@ -498,6 +508,17 @@ function getTeams() {
   );
 
   return $teams;
+}
+
+function getRounds() {
+  global $wpdb;
+  global $roundsTable;
+
+  $rounds = $wpdb->get_results(
+    'SELECT * FROM '.$roundsTable, OBJECT
+  );
+
+  return $rounds;
 }
 
 function getVenuesByGameId($gameId) {
